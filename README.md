@@ -35,4 +35,34 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
+## Install Skelaton UI
+```bash
+npm i -D @skeletonlabs/skeleton @skeletonlabs/skeleton-svelte
+```
+
+add to `/src/app.css`
+```
+@import 'tailwindcss'; <<< ( may already be here)
+
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+@import '@skeletonlabs/skeleton/themes/cerberus';
+
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+```
+
+Set Active Theme
+Open /src/app.html, then set the data-theme attribute on the HTML tag to define the active theme.
+
+```
+<html data-theme="<Your_Theme_Here>">...</html>
+```
+
+Start your dev server
+```
+npm run dev
+```
+
+
+
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
